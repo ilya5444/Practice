@@ -1,0 +1,32 @@
+﻿@model StudentModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="w-50 m-auto">
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="text-center" colspan="2">Студент</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-secondary">
+                <th>Фамилия</th>
+                <td>@Model.Surname</td>
+            </tr>
+            <tr>
+                <th>Имя</th>
+                <td>@Model.Name</td>
+            </tr>
+            <tr class="table-secondary">
+                <th>Специальность</th>
+                <td>@Model.Specialization</td>
+            </tr>
+            <tr>
+                <th>Курс</th>
+                <td>@Model.Year</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
