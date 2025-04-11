@@ -9,12 +9,9 @@ namespace WebMVC.Controllers
     {
         private IStudentService studentService;
 
-        private IWebHostEnvironment environment;
-
-        public HomeController(IStudentService studentService, IWebHostEnvironment environment)
+        public HomeController(IStudentService studentService)
         {
             this.studentService = studentService;
-            environment = environment;
         }
 
         [HttpGet]
