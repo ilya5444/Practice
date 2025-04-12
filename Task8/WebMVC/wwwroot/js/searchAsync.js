@@ -3,7 +3,9 @@
 $(".search-btn").on("click", async () => {
     let students = await fetch("https://localhost/api/Student", {
         method: "post",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+            "Content-Type": "application/json",
+        },
         body: `"${$(".group-field").val()}"`
     })
         .then(response => response.json())

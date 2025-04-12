@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using WebMVC.Constants;
 using WebMVC.Contracts;
 using WebMVC.Services;
 
@@ -15,6 +17,7 @@ public class StudentController : ControllerBase
         this.service = service;
     }
 
+    [Authorize(Roles = Roles.Admin)]
     [HttpPost]
     public IEnumerable<StudentContract> Get([FromBody] string? groupNumber)
     {
