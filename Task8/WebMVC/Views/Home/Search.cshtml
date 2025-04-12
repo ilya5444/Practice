@@ -1,0 +1,64 @@
+﻿@{
+	ViewData["Title"] = "Search";
+	var students = ViewData["Students"] as List<Student>;
+}
+
+<div class="mt-5">
+	<table class="table w-75 m-auto">
+		<thead>
+			<tr>
+				<th class="text-center" colspan="8">Студенты</th>
+			</tr>
+			<tr>
+				<th class="text-center">Фамилия</th>
+				<th class="text-center">Имя</th>
+				<th class="text-center">Специальность</th>
+				<th class="text-center">Факультет</th>
+				<th class="text-center">Номер группы</th>
+				<th class="text-center">Курс</th>
+				<th class="text-center">Год поступления</th>
+				<th class="text-center">День рождения</th>
+			</tr>
+		</thead>
+		@if (students != null && students.Count != 0)
+		{
+			<tbody>
+				@for (int i = 0; i < students.Count; i++)
+				{
+					string tableSecondaryClass = string.Empty;
+
+					if (i % 2 == 0)
+					{
+						tableSecondaryClass = "class=table-secondary";
+					}
+
+					<tr @tableSecondaryClass>
+						<td>@students[i].Lastname</td>
+						<td>@students[i].Firstname</td>
+						<td>@students[i].SpecializationNavigation.Name</td>
+						<td>@students[i].GroupNavigation.InstituteNavigation.InstituteName</td>
+						<td>@students[i].GroupNavigation.GroupNumber</td>
+						<td>@students[i].Year</td>
+						<td>@students[i].AdmissionYear</td>
+						<td>@students[i].Birthdate.ToString("dd.MM.yyyy")</td>
+					</tr>
+				}
+			</tbody>
+		}
+	</table>
+</div>
+
+@if (students == null)
+{
+	<div class="text-center mt-5">Попробуйте что-нибудь ввести</div>
+}
+else if (students.Count == 0)
+{
+	<div class="text-center mt-5">Студенты с такой группой не найдены</div>
+}
+
+<form class="m-auto mt-5" style="width: fit-content" method="post">
+	<label for="groupNumber">Студенты группы:</label>
+	<input name="groupNumber" />
+	<button>Поиск</button>
+</form>

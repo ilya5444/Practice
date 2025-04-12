@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="m-auto">
+    <h3 class="mt-5 text-center">Регистрация</h3>
+    <div class="register-warning text-danger text-center">@(ViewData["EmailIsOccupied"])</div>
+    <form class="register-form d-flex flex-column w-25 m-auto mt-5" asp-controller="Auth" asp-action="Register" method="post">
+        <label for="name">Имя</label>
+        <input name="name" required/>
+        <label class="mt-2" for="email">Email</label>
+        <input name="email" type="email" required />
+        <label class="mt-2" for="password">Пароль</label>
+        <input name="password" type="password" required />
+        <label class="mt-2" for="confirmPassword">Повтор пароля</label>
+        <input name="confirmPassword" type="password" required />
+        <button class="register-btn btn-primary m-auto mt-3 w-75">Создать учётную запись</button>
+    </form>
+</div>
+
+<script src="~/js/register.js"></script>
+
