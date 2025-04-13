@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZSYauTVJHKxnZzuimRDY6p8I33h1DAHMhCB8Pq3sCw0=",
+  "Hash": "XbknoXUDXGrhB6WiZzjcGAlj+Kp0CcWAWb+57FkZHQw=",
   "Source": "WebMVC",
   "BasePath": "_content/WebMVC",
   "Mode": "Default",
@@ -136,8 +136,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "8ny635hf1a",
-      "Integrity": "HCTqqqpV5WW8/xxG4cNSvYkFzISSSR0yqJmOv/7ZEko=",
+      "Fingerprint": "fgalrge36s",
+      "Integrity": "LwMxU1cVNzwkyP+A7tujcZYQrUyHUM5oxAop57zjmOk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\searchAsync.js"
@@ -1609,7 +1609,7 @@
       ]
     },
     {
-      "Route": "js/searchAsync.8ny635hf1a.js",
+      "Route": "js/searchAsync.fgalrge36s.js",
       "AssetFile": "C:\\Users\\Admin\\Desktop\\Practice\\Task8\\WebMVC\\wwwroot\\js\\searchAsync.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1619,7 +1619,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1423"
+          "Value": "1354"
         },
         {
           "Name": "Content-Type",
@@ -1627,11 +1627,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"HCTqqqpV5WW8/xxG4cNSvYkFzISSSR0yqJmOv/7ZEko=\""
+          "Value": "\"LwMxU1cVNzwkyP+A7tujcZYQrUyHUM5oxAop57zjmOk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 12 Apr 2025 15:45:22 GMT"
+          "Value": "Sat, 12 Apr 2025 15:46:49 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1641,7 +1641,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "8ny635hf1a"
+          "Value": "fgalrge36s"
         },
         {
           "Name": "label",
@@ -1649,7 +1649,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-HCTqqqpV5WW8/xxG4cNSvYkFzISSSR0yqJmOv/7ZEko="
+          "Value": "sha256-LwMxU1cVNzwkyP+A7tujcZYQrUyHUM5oxAop57zjmOk="
         }
       ]
     },
@@ -1664,7 +1664,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1423"
+          "Value": "1354"
         },
         {
           "Name": "Content-Type",
@@ -1672,11 +1672,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"HCTqqqpV5WW8/xxG4cNSvYkFzISSSR0yqJmOv/7ZEko=\""
+          "Value": "\"LwMxU1cVNzwkyP+A7tujcZYQrUyHUM5oxAop57zjmOk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 12 Apr 2025 15:45:22 GMT"
+          "Value": "Sat, 12 Apr 2025 15:46:49 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1686,7 +1686,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-HCTqqqpV5WW8/xxG4cNSvYkFzISSSR0yqJmOv/7ZEko="
+          "Value": "sha256-LwMxU1cVNzwkyP+A7tujcZYQrUyHUM5oxAop57zjmOk="
         }
       ]
     },

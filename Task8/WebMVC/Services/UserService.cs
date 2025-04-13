@@ -3,15 +3,18 @@ using WebMVC.Database;
 using WebMVC.Models;
 using WebMVC.Constants;
 using System.Security.Claims;
+using WebMVC.Dao;
 
 namespace WebMVC.Services;
 
 public class UserService : IUserService
 {
-    private readonly PracticeDbContext dbContext;
+    private readonly IUserDao users;
 
-    public UserService(PracticeDbContext dbContext)
-        => this.dbContext = dbContext;
+    public UserService(IUserDao users)
+    {
+        this.users = users;
+    }
 
     public User? GetCurrentUser(IEnumerable<Claim> claims)
     {
@@ -22,7 +25,7 @@ public class UserService : IUserService
             return null;
         }
 
-        return GetUser(int.Parse(userIdClaim.Value));
+        return users.FindById(int.Parse(userIdClaim.Value));
     }
 
     public string GetCurrentUserRole(IEnumerable<Claim> claims)
@@ -34,7 +37,7 @@ public class UserService : IUserService
             return Roles.Anonymous;
         }
 
-        var user = GetUser(int.Parse(userIdClaim.Value));
+        var user = users.FindById(int.Parse(userIdClaim.Value));
 
         if (user == null)
         {
@@ -42,23 +45,5 @@ public class UserService : IUserService
         }
 
         return user.RoleNavigation.Name;
-    }
-
-    private User? GetUser(int userId)
-    {
-        User? user;
-
-        try
-        {
-            user = dbContext.Users
-                 .Include(x => x.RoleNavigation)
-                 .First(x => x.UserId == userId);
-        }
-        catch (InvalidOperationException)
-        {
-            user = null;
-        }
-
-        return user;
     }
 }

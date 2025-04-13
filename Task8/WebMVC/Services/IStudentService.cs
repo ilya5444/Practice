@@ -5,7 +5,7 @@ namespace WebMVC.Services;
 
 public interface IStudentService
 {
-    public IIncludableQueryable<Student, Institute> GetAllStudents();
+    public List<Student> GetAllStudents();
 
-    public IQueryable<Student> GetStudentsByGroup(string groupNumber);
+    public List<Student> GetStudentsByGroup(string groupNumber);
 }

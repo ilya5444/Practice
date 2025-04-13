@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
-builder.Services.InjectDbContexts();
+builder.Services.InjectDataLayer();
 builder.Services.InjectServices();
 builder.Services.InjectUtilities();
 builder.Services.ConfigureAuthentication(builder.Configuration);

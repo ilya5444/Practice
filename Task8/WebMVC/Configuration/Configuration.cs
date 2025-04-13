@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using WebMVC.Constants;
+using WebMVC.Dao;
 using WebMVC.Database;
 using WebMVC.Services;
 
@@ -10,9 +11,13 @@ namespace WebMVC.Configuration;
 
 public static class Configuration
 {
-    public static IServiceCollection InjectDbContexts(this IServiceCollection services)
+    public static IServiceCollection InjectDataLayer(this IServiceCollection services)
     {
         services.AddDbContext<PracticeDbContext>();
+
+        services.AddScoped<IUserDao, UserDao>();
+        services.AddScoped<IStudentDao, StudentDao>();
+        services.AddScoped<IRoleDao, RoleDao>();
 
         return services;
     }

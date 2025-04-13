@@ -66,8 +66,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>8ny635hf1a</Fingerprint>
-      <Integrity>HCTqqqpV5WW8/xxG4cNSvYkFzISSSR0yqJmOv/7ZEko=</Integrity>
+      <Fingerprint>fgalrge36s</Fingerprint>
+      <Integrity>LwMxU1cVNzwkyP+A7tujcZYQrUyHUM5oxAop57zjmOk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\searchAsync.js'))</OriginalItemSpec>

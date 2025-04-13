@@ -30,7 +30,7 @@ public class HomeController : Controller
     [HttpGet("Students")]
     public IActionResult Students()
     {
-        ViewData["Students"] = studentService.GetAllStudents().ToList();
+        ViewData["Students"] = studentService.GetAllStudents();
         ViewData["UserRole"] = Roles.Admin;
 
         return View("Students");
@@ -40,7 +40,7 @@ public class HomeController : Controller
     [HttpGet("Search")]
     public IActionResult Search()
     {
-        ViewData["Students"] = studentService.GetAllStudents().ToList();
+        ViewData["Students"] = studentService.GetAllStudents();
         ViewData["UserRole"] = Roles.Admin;
 
         return View();
@@ -64,7 +64,7 @@ public class HomeController : Controller
     [HttpGet("SearchAsync")]
     public IActionResult SearchAsync()
     {
-        ViewData["Students"] = studentService.GetAllStudents().ToList();
+        ViewData["Students"] = studentService.GetAllStudents();
         ViewData["UserRole"] = Roles.Admin;
 
         return View("SearchAsync");

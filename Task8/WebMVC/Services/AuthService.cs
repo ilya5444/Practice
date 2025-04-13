@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using WebMVC.Constants;
 using WebMVC.Contracts;
+using WebMVC.Dao;
 using WebMVC.Database;
 using WebMVC.Models;
 
@@ -9,13 +10,16 @@ namespace WebMVC.Services;
 
 public class AuthService : IAuthService
 {
-    private readonly PracticeDbContext dbContext;
+    private IUserDao users;
 
-    private readonly IPasswordHasher<object> passwordHasher;
+    private IRoleDao roles;
 
-    public AuthService(PracticeDbContext dbContext, IPasswordHasher<object> passwordHasher)
+    private IPasswordHasher<object> passwordHasher;
+
+    public AuthService(IUserDao users, IRoleDao roles, IPasswordHasher<object> passwordHasher)
     {
-        this.dbContext = dbContext;
+        this.users = users;
+        this.roles = roles;
         this.passwordHasher = passwordHasher;
     }
 
@@ -26,34 +30,17 @@ public class AuthService : IAuthService
             Name = data.Name,
             Email = data.Email,
             Password = passwordHasher.HashPassword(null!, data.Password),
-            Role = dbContext.Roles.First(role => role.Name.Equals(Roles.User)).RoleId
+            Role = roles.GetId(Roles.User)
         };
 
-        var userEntity = dbContext.Users.Add(user);
-
-        try
-        {
-            dbContext.SaveChanges();
-        }
-        catch (DbUpdateException)
-        {
-            return null;
-        }
-
-        return userEntity.Entity;
+        return users.Add(user);
     }
 
     public User? Authorize(LoginContract data)
     {
-        User user;
+        User? user = users.FindByEmail(data.Email);
 
-        try
-        {
-            user = dbContext.Users
-                            .Include(x => x.RoleNavigation)
-                            .First(x => x.Email.Equals(data.Email));
-        }
-        catch (InvalidOperationException)
+        if (user == null)
         {
             return null;
         }
