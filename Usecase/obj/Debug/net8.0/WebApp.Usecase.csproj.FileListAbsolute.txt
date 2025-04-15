@@ -1,0 +1,15 @@
+C:\Users\Admin\Desktop\Practice\Task9\Usecase\bin\Debug\net8.0\WebApp.Usecase.deps.json
+C:\Users\Admin\Desktop\Practice\Task9\Usecase\bin\Debug\net8.0\WebApp.Usecase.dll
+C:\Users\Admin\Desktop\Practice\Task9\Usecase\bin\Debug\net8.0\WebApp.Usecase.pdb
+C:\Users\Admin\Desktop\Practice\Task9\Usecase\bin\Debug\net8.0\WebApp.Domain.dll
+C:\Users\Admin\Desktop\Practice\Task9\Usecase\bin\Debug\net8.0\WebApp.Domain.pdb
+C:\Users\Admin\Desktop\Practice\Task9\Usecase\obj\Debug\net8.0\WebApp.Usecase.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Practice\Task9\Usecase\obj\Debug\net8.0\WebApp.Usecase.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\Practice\Task9\Usecase\obj\Debug\net8.0\WebApp.Usecase.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Practice\Task9\Usecase\obj\Debug\net8.0\WebApp.Usecase.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Practice\Task9\Usecase\obj\Debug\net8.0\WebApp.Usecase.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Practice\Task9\Usecase\obj\Debug\net8.0\WebApp.U.593F09BE.Up2Date
+C:\Users\Admin\Desktop\Practice\Task9\Usecase\obj\Debug\net8.0\WebApp.Usecase.dll
+C:\Users\Admin\Desktop\Practice\Task9\Usecase\obj\Debug\net8.0\refint\WebApp.Usecase.dll
+C:\Users\Admin\Desktop\Practice\Task9\Usecase\obj\Debug\net8.0\WebApp.Usecase.pdb
+C:\Users\Admin\Desktop\Practice\Task9\Usecase\obj\Debug\net8.0\ref\WebApp.Usecase.dll
