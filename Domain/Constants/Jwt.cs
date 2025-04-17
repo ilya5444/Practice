@@ -1,4 +1,4 @@
-﻿namespace WebApp.Domain.Constants;
+﻿namespace WebAPI.Domain.Constants;
 
 public static class Jwt
 {
