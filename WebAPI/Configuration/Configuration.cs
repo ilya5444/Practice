@@ -40,6 +40,16 @@ public static class Configuration
         return services;
     }
 
+    public static IServiceCollection ConfigureSwagger(this IServiceCollection services)
+    {
+        services.AddSwaggerGen(config =>
+        {
+            config.OperationFilter<ApiTokenHeaderFilter>();
+        });
+
+        return services;
+    }
+
     public static IServiceCollection ConfigureAuthentication(this IServiceCollection services, IConfiguration config)
     {
         services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

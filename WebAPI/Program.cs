@@ -1,10 +1,11 @@
 using WebAPI.Configuration;
+using WebAPI.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.ConfigureSwagger();
 
 builder.Services.InjectDataLayer();
 builder.Services.InjectServices();
@@ -22,6 +23,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseRouting();
+
+app.UseMiddleware<ApiTokenMiddleware>();
 
 app.UseAuthentication();
 app.UseAuthorization();
